@@ -56,4 +56,18 @@ public class SkillController {
         }
     }
 
+    @GetMapping("edit/{skillId}")
+    public String displayEditSkill(Model model, @PathVariable int skillId) {
+
+        Optional<Skill> optSkill = skillRepository.findById(skillId);
+        if (optSkill.isPresent()) {
+            Skill skill = optSkill.get();
+            model.addAttribute("skill", skill);
+            return "skills/editP";
+        } else {
+            return "redirect:../";
+        }
+
+    }
+
 }
