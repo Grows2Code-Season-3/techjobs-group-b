@@ -12,13 +12,18 @@ public class Job extends AbstractEntity {
     @ManyToMany
     private List<Skill> skills;
 
+    @ManyToMany
+    private List<Location> locations;
+
     public Job() {
     }
 
-    public Job(Employer anEmployer, List<Skill> someSkills) {
+    // added locations List along with access modifiers
+    public Job(Employer anEmployer, List<Skill> someSkills, List<Location> someLocations) {
         super();
         this.employer = anEmployer;
         this.skills = someSkills;
+        this.locations = someLocations;
     }
 
     // Getters and setters.
@@ -37,5 +42,13 @@ public class Job extends AbstractEntity {
 
     public void setSkills(List<Skill> skills) {
         this.skills = skills;
+    }
+
+    public List<Location> getLocations() {
+        return locations;
+    }
+
+    public void setLocations(List<Location> locations) {
+        this.locations = locations;
     }
 }

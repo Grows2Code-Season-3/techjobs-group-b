@@ -33,6 +33,15 @@
         <a th:href="@{'/skills/add'}">Add Skills</a>
     </div>
 
+    <div class="form-group">
+        <label th:for="locations">Job Locations</label>
+        <th:block th:each="location : ${locations}">
+            <input type="checkbox" name="locations" th:value="${location.id}">
+            <label th:text="${location.name}"></label>
+        </th:block>
+        <a th:href="@{'/locations/add'}">Add Job Locations</a>
+    </div>
+
     <input type="submit" value="Add Job" />
 </form>
 
