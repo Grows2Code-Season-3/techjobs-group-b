@@ -30,6 +30,16 @@
             </ul>
         </td>
     </tr>
+    <tr>
+        <th>Job Location</th>
+        <td>
+            <ul th:each="location : ${job.locations}">
+                <li>
+                    <a th:href="@{'/locations/view/' + ${location.id}}" th:text="${location.name}"></a>
+                </li>
+            </ul>
+        </td>
+    </tr>
 </table>
 
 
