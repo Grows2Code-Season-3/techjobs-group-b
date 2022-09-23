@@ -60,3 +60,17 @@ div.job-listing {
     width: 80%;
     background-color: #e4e4e4;
 }
+
+
+/*Logo Image in Navbar*/
+
+ .logo-image{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-top: -10%;
+}
+
+.img-fluid{
+    width:100%
+}

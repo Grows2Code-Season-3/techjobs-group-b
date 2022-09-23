@@ -15,6 +15,11 @@
 
 <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
+        <a class="navbar-brand" th:href="@{/}">
+            <div class="logo-image">
+                <img th:src="@{/img/launchcode.png}" class="img-fluid">
+            </div>
+        </a>
         <div class="navbar-header">
             <a th:href="@{/}" class="navbar-brand">TechJobs</a>
         </div>
